@@ -23,11 +23,20 @@ Tutorial for email regular expression. A regex can be used for many things inclu
 ## Regex Components
 
 ### Anchors
-An anchor in a regex is used to identify the beginning and end of a string.  The beginning anchor can be identified by the "^" symbol and the ending of a string can be identified by the "$" string.  For example, in the above example of what a regex looks like for an email address, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,  notice the "^" symbol directly after the / and the "$" right before the final /. 
+An anchor in a regex is used to identify the beginning and end of a string.  The beginning anchor can be identified by the "^" symbol and the ending of a string can be identified by the "$" string.  For example, in the above example of what a regex looks like for an email address, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,  notice the "^" symbol directly after the / and the "$" right before the final /. These symbols identify the complete regex collectively.  Please see below for examples of quantifiers and their meanings;
+
+
 
 
 ### Quantifiers
+Quantifiers indicate numbers of characters or expressions to match. In other words, quantifiers are metacharacters that specify how many times the previous character or group should be matched. 
 
+-"+" - + means the previous character must occur one or more times.
+        Ex. ([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+        Notice there are two + symbols in the example regex.  They indicate that the previous character or array must occur at least 1 or more times. So this array - [a-z0-9_\.-] and this array,  [\da-z\.-], must occur at least once in one form or another.  
+
+-"?" - ? means that the preceding character is optional, so insstead of occuring 1 or more times, this character can exist or not exist without creating an error for the email address regex or other regex being used.  
 ### OR Operator
 
 ### Character Classes
