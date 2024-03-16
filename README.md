@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Regex-Tutorial
 
-Introductory paragraph (replace this with your text)
+A Regular expression tutorial to explain how a regular expression also known as regex can be used to identify character patterns for email functions by breaking down each part of the expression and describing what it does.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Tutorial for email regular expression. A regex can be used for many things including matching the following items; hex value, email, URL, HTML tag, etc.  This tutorial will specifically focus on how a regex can be used to match a email address.  The following code is an example of what a regex can be used to verify that user input is a valid email address.  
 
 ## Table of Contents
 
@@ -23,6 +23,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+An anchor in a regex is used to identify the beginning and end of a string.  The beginning anchor can be identified by the "^" symbol and the ending of a string can be identified by the "$" string.  For example, in the above example of what a regex looks like for an email address, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,  notice the "^" symbol directly after the / and the "$" right before the final /. 
+
 
 ### Quantifiers
 
