@@ -37,6 +37,15 @@ Quantifiers indicate numbers of characters or expressions to match. In other wor
         Notice there are two + symbols in the example regex.  They indicate that the previous character or array must occur at least 1 or more times. So this array - [a-z0-9_\.-] and this array,  [\da-z\.-], must occur at least once in one form or another.  
 
 -"?" - ? means that the preceding character is optional, so instead of occuring 1 or more times, this character can exist or not exist without creating an error for the email address regex or other regex being used.  
+
+-"*" - * means that the preceding character matches zero or more times. 
+
+-"{}" - {} curly brackets are used to match a variable amount of occurences exactly.
+
+-"{n,}" - {n,} curly brackets with a comma also matches a variable amount of occurrences, but it is not exact.  It represents a variable number or more.  
+
+-"{n,m}" - {n,m} curly brackets with two different variables indicates a range of different occurences between the two variables.
+
 ### OR Operator
 
 ### Character Classes
