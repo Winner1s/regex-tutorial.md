@@ -76,32 +76,67 @@ m —Multi-line search: a multi-line input string should be treated as multiple 
 In the example, there are no flags being used.
 
 ### Grouping and Capturing
-Grouping is using symbols or parenthesis to separate different areas of a regex.  For example in our example regex, there are three different groups.  Each group is separated by parenthesis.
 
- /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+Grouping is using symbols or parenthesis to separate different areas of a regex. For example in our example regex, there are three different groups. Each group is separated by parenthesis.
 
- - group 1 (user created email address)- ([a-z0-9_\.-]+)
- - group 2 (domain name or email service, (hotmail, outlook, gmail etc.))- ([\da-z\.-]+)
- - group 3 (domain extention(.com, .gov, .net etc.))- ([a-z\.]{2,6})
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
+- group 1 (user created email address)- ([a-z0-9_\.-]+)
+- group 2 (domain name or email service, (hotmail, outlook, gmail etc.))- ([\da-z\.-]+)
+- group 3 (domain extention(.com, .gov, .net etc.))- ([a-z\.]{2,6})
 
 ### Bracket Expressions
-Brackets in a regex do not mean "array" they indicate that there is a range of characters that can be used as a specific part of the regex.  For example in the above example for grouping, notice that every group also includes brackets.  Each bracket is an explanation of characters and character types that can be included.  
 
-- group 1 - ([a-z0-9_\.-]+) - everything inside of the bracketed area of group 1 in our example can be used as the regex for the user created email.  So the user created email can include letters a-z, numbers 0-9, and can also include an underscore or a hypen.  
+Brackets in a regex do not mean "array" they indicate that there is a range of characters that can be used as a specific part of the regex. For example in the above example for grouping, notice that every group also includes brackets. Each bracket is an explanation of characters and character types that can be included.
 
+- group 1 - ([a-z0-9_\.-]+) - everything inside of the bracketed area of group 1 in our example can be used as the regex for the user created email. So the user created email can include letters a-z, numbers 0-9, and can also include an underscore or a hypen.
 
 ### Greedy and Lazy Match
-The "?" symbol can be used to make quantifiers lazy.  When a quantifier is lazy, it will match the minimum amount of quantifiers.  
+
+The "?" symbol can be used to make quantifiers lazy. When a quantifier is lazy, it will match the minimum amount of expressions.
 
 When a quantifier is greedy, the search will back track until the pattern is complete.
 
 ### Boundaries
 
+The (\b) is an anchor like the caret (^) and the dollar sign ($). It matches a position that is called a “word boundary”. The word boundary match is zero-length.
+
+The following three positions are qualified as word boundaries:
+
+- Before the first character in a string if the first character is a word character.
+- After the last character in a string if the last character is a word character.
+- Between two characters in a string if one is a word character and the other is not.
+
+The word boundary \b allows you to carry the match the whole word using a regular expression in the following form:
+
+\bword\b
+
 ### Back-references
+
+Backreferences match the same text as previously matched by a capturing group.  For example the following regex only contains one pair of parentheses and it captures the string that represents the HTML tag.  
+
+<([A-Z][A-Z0-9]*)\b[^>]*>.*?</\1>
+
+
 
 ### Look-ahead and Look-behind
 
+Lookahead and look behind assertions have positive and negative forms.  These assertions are non-capturing groups that return matches only if the targe tstring is followed or preceded by a particular character.  For example, a positive Lookahead is represented by:
+
+(?=chars), this means that in the expression x(?=y) match x only if it is followed by y.
+
+A negative assertion can be represented by the following:
+
+^.+(?<!js|css|html)$
+
+$ asserts that the current position is the end of the string and the negative lookbehind asserts that what precedes the current position (the end position) in the string is not the characters “js”, “css”, or “html”. That means it will match strings that do not end with “js”, “css”, and “html”.
+
+
+
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Stefany Hobson, I am a Developer in training who has gained plenty of experience navigating information and the needs of information based systems as a corporate user of these systems.  I have recently decided to focus on learning something that I find challenging so that I can be rewarded in the end with knowledge and skills that I have worked hard to  earn.  I have trained with using Java as a programming language and I have switched over to Javascript due to Javascript is a more common programming language. Although, I do find computer programming challenging I am excited to continue on this journey of learning to code.  
+
+To follow me on my coding journey, please checkout my github projects at, 
+Github:  https://github.com/Winner1s.
