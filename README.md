@@ -36,7 +36,7 @@ Quantifiers indicate numbers of characters or expressions to match. In other wor
 
         Notice there are two + symbols in the example regex.  They indicate that the previous character or array must occur at least 1 or more times. So this array - [a-z0-9_\.-] and this array,  [\da-z\.-], must occur at least once in one form or another.  
 
--"?" - ? means that the preceding character is optional, so insstead of occuring 1 or more times, this character can exist or not exist without creating an error for the email address regex or other regex being used.  
+-"?" - ? means that the preceding character is optional, so instead of occuring 1 or more times, this character can exist or not exist without creating an error for the email address regex or other regex being used.  
 ### OR Operator
 
 ### Character Classes
