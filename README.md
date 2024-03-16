@@ -80,14 +80,21 @@ Grouping is using symbols or parenthesis to separate different areas of a regex.
 
  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
- - group 1 - ([a-z0-9_\.-]+)
- - group 2 - ([\da-z\.-]+)
- - group 3 - ([a-z\.]{2,6})
+ - group 1 (user created email address)- ([a-z0-9_\.-]+)
+ - group 2 (domain name or email service, (hotmail, outlook, gmail etc.))- ([\da-z\.-]+)
+ - group 3 (domain extention(.com, .gov, .net etc.))- ([a-z\.]{2,6})
 
 
 ### Bracket Expressions
+Brackets in a regex do not mean "array" they indicate that there is a range of characters that can be used as a specific part of the regex.  For example in the above example for grouping, notice that every group also includes brackets.  Each bracket is an explanation of characters and character types that can be included.  
+
+- group 1 - ([a-z0-9_\.-]+) - everything inside of the bracketed area of group 1 in our example can be used as the regex for the user created email.  So the user created email can include letters a-z, numbers 0-9, and can also include an underscore or a hypen.  
+
 
 ### Greedy and Lazy Match
+The "?" symbol can be used to make quantifiers lazy.  When a quantifier is lazy, it will match the minimum amount of quantifiers.  
+
+When a quantifier is greedy, the search will back track until the pattern is complete.
 
 ### Boundaries
 
