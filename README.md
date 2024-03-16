@@ -78,6 +78,12 @@ In the example, there are no flags being used.
 ### Grouping and Capturing
 Grouping is using symbols or parenthesis to separate different areas of a regex.  For example in our example regex, there are three different groups.  Each group is separated by parenthesis.
 
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+ - group 1 - ([a-z0-9_\.-]+)
+ - group 2 - ([\da-z\.-]+)
+ - group 3 - ([a-z\.]{2,6})
+
 
 ### Bracket Expressions
 
